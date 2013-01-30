@@ -1,5 +1,5 @@
 //
-//  ERSViewController.h
+//  NewsViewController.h
 //  AboutERS
 //
 //  Created by Dina Li on 1/29/13.
@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Parser.h"
+#import "Record.h"
 
-@interface ERSViewController : UIViewController
+@interface NewsViewController : UITableViewController
 
 @end
