@@ -137,7 +137,7 @@
                             if([[descriptionDictionary objectForKey:@"keyField"] isEqualToString:@"description"])
                                 {
                                     description = [descriptionDictionary objectForKey:@"propertyValueField"];
-                                  //  NSLog(@"description = %@", description);
+                                    NSLog(@"description = %@", description);
                                 }
                             } // end for g
                         }

@@ -33,7 +33,7 @@
 {
     if (_detailItem != newDetailItem) {
         _detailItem = newDetailItem;
-        NSLog(@"detail Item = %@", _detailItem);
+       // NSLog(@"detail Item = %@", _detailItem);
     }
 }
 

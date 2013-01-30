@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="11G63b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FPw-tk-lbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2844" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FPw-tk-lbh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1930"/>
     </dependencies>
@@ -88,7 +88,10 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J9u-BL-XRw">
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <accessibility key="accessibilityConfiguration">
+                                                <accessibilityTraits key="traits" none="YES" link="YES" staticText="YES"/>
+                                            </accessibility>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         </label>
@@ -101,7 +104,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <connections>
-                                    <segue destination="tC4-8r-mqA" kind="push" identifier="showTweet" id="SLk-hl-Pgp"/>
+                                    <segue destination="tC4-8r-mqA" kind="push" identifier="showTweet" id="oa1-He-ZWL"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -110,7 +113,7 @@
                             <outlet property="delegate" destination="nsC-jL-XI1" id="zgo-qp-BSJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ebA-Fs-E0s"/>
+                    <navigationItem key="navigationItem" title="Twitter" id="ebA-Fs-E0s"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ikp-I2-gMm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -138,10 +141,13 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mfS-pE-uxc"/>
+                    <connections>
+                        <outlet property="tweetWebView" destination="2kz-tG-XYN" id="RQH-Tr-qSa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xi5-xB-ghd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1032" y="483"/>
+            <point key="canvasLocation" x="1050" y="479"/>
         </scene>
         <!--Tab Bar Controller - About ERS-->
         <scene sceneID="Mq3-28-9Qk">
@@ -202,7 +208,7 @@
         <scene sceneID="k6b-qV-MB7">
             <objects>
                 <navigationController id="SGE-QN-WaK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Twitter" image="tiny-twitter-icon.png" id="WJe-YN-2hP"/>
+                    <tabBarItem key="tabBarItem" title="Twitter" image="twitter_icon.jpg" id="WJe-YN-2hP"/>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="cTJ-n0-dc6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="uPN-Mh-sw8">
@@ -218,29 +224,28 @@
             </objects>
             <point key="canvasLocation" x="255" y="471"/>
         </scene>
-        <!--Api View Controller - Data from Website API-->
+        <!--Api View Controller - Charts API-->
         <scene sceneID="tVO-gX-RTN">
             <objects>
-                <viewController title="Data from Website API" id="7G8-NF-mgn" customClass="apiViewController" sceneMemberID="viewController">
+                <viewController title="Charts API" id="7G8-NF-mgn" customClass="apiViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pbD-Gn-VO2">
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="303" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-L0-9SW">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="316" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-L0-9SW">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="303" id="Dtt-xz-UUx"/>
-                                    <constraint firstAttribute="height" constant="41" id="q7I-Bw-noc"/>
+                                    <constraint firstAttribute="height" constant="58" id="D9q-tC-n2h"/>
+                                    <constraint firstAttribute="width" constant="316" id="rTE-xm-Gr0"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SMN-dd-3vp">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="0Ke-wr-gx5"/>
-                                    <constraint firstAttribute="width" constant="306" id="qKa-Ii-1ov"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -248,14 +253,14 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UE-hB-RHX">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="262" id="EQZ-MS-aKc"/>
+                                    <constraint firstAttribute="height" constant="200" type="user" id="Do4-ME-5Pg"/>
+                                    <constraint firstAttribute="width" constant="314" id="krv-Rz-SaE"/>
                                 </constraints>
                             </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" text="note description" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-cA-UHI">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="304" id="oco-GF-r1u"/>
-                                    <constraint firstAttribute="height" constant="88" id="p11-dn-FKf"/>
+                                    <constraint firstAttribute="height" constant="62" id="rB8-Sv-s3f"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -264,15 +269,16 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="E4t-cA-UHI" firstAttribute="trailing" secondItem="3UE-hB-RHX" secondAttribute="trailing" type="default" id="50u-Gg-eFR"/>
-                            <constraint firstItem="E4t-cA-UHI" firstAttribute="bottom" secondItem="pbD-Gn-VO2" secondAttribute="bottom" type="default" id="6uQ-H8-UQb"/>
-                            <constraint firstItem="SMN-dd-3vp" firstAttribute="leading" secondItem="PCm-L0-9SW" secondAttribute="leading" type="default" id="HQW-Xf-d2W"/>
-                            <constraint firstItem="PCm-L0-9SW" firstAttribute="centerX" secondItem="pbD-Gn-VO2" secondAttribute="centerX" type="default" id="YtH-cu-TMQ"/>
-                            <constraint firstItem="SMN-dd-3vp" firstAttribute="trailing" secondItem="3UE-hB-RHX" secondAttribute="trailing" type="default" id="krp-nD-83q"/>
-                            <constraint firstItem="3UE-hB-RHX" firstAttribute="top" secondItem="SMN-dd-3vp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="mBX-HA-oD3"/>
-                            <constraint firstItem="3UE-hB-RHX" firstAttribute="leading" secondItem="SMN-dd-3vp" secondAttribute="leading" type="default" id="uDj-Tw-6wv"/>
-                            <constraint firstItem="E4t-cA-UHI" firstAttribute="top" secondItem="3UE-hB-RHX" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="vIm-lR-Q0M"/>
-                            <constraint firstItem="SMN-dd-3vp" firstAttribute="top" secondItem="PCm-L0-9SW" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="wcU-yv-uW2"/>
+                            <constraint firstItem="SMN-dd-3vp" firstAttribute="trailing" secondItem="PCm-L0-9SW" secondAttribute="trailing" type="default" id="0I3-d3-rRo"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="leading" secondItem="3UE-hB-RHX" secondAttribute="leading" type="default" id="3XR-rJ-q8E"/>
+                            <constraint firstAttribute="bottom" secondItem="E4t-cA-UHI" secondAttribute="bottom" constant="7" id="F8O-fE-c28"/>
+                            <constraint firstItem="SMN-dd-3vp" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" constant="61" id="Lkp-bS-bsu"/>
+                            <constraint firstItem="PCm-L0-9SW" firstAttribute="centerX" secondItem="pbD-Gn-VO2" secondAttribute="centerX" type="default" id="MFN-ls-cjK"/>
+                            <constraint firstItem="SMN-dd-3vp" firstAttribute="centerX" secondItem="3UE-hB-RHX" secondAttribute="centerX" type="default" id="Mk9-Al-oJY"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="trailing" secondItem="3UE-hB-RHX" secondAttribute="trailing" type="default" id="eXc-S0-qN3"/>
+                            <constraint firstItem="SMN-dd-3vp" firstAttribute="leading" secondItem="PCm-L0-9SW" secondAttribute="leading" type="default" id="kN6-cY-AFm"/>
+                            <constraint firstItem="3UE-hB-RHX" firstAttribute="top" secondItem="SMN-dd-3vp" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="kds-N8-l6a"/>
+                            <constraint firstItem="PCm-L0-9SW" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" type="default" id="lci-AO-J4j"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="waD-7p-Py2"/>
@@ -291,7 +297,7 @@
     <resources>
         <image name="bar-chart.png" width="29" height="24"/>
         <image name="rss.png" width="32" height="32"/>
-        <image name="tiny-twitter-icon.png" width="15" height="15"/>
+        <image name="twitter_icon.jpg" width="30" height="30"/>
     </resources>
     <classes>
         <class className="NSLayoutConstraint" superclassName="NSObject">

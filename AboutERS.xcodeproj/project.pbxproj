@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		96C4741216B97FF300826D7A /* twitter_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96C4741116B97FF300826D7A /* twitter_icon.jpg */; };
 		96F3D74216B82C8A007BE98F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74116B82C8A007BE98F /* UIKit.framework */; };
 		96F3D74416B82C8A007BE98F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74316B82C8A007BE98F /* Foundation.framework */; };
 		96F3D74616B82C8A007BE98F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74516B82C8A007BE98F /* CoreGraphics.framework */; };
@@ -55,6 +56,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		96C4741116B97FF300826D7A /* twitter_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter_icon.jpg; sourceTree = "<group>"; };
 		96F3D73D16B82C8A007BE98F /* AboutERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3D74116B82C8A007BE98F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96F3D74316B82C8A007BE98F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -189,6 +191,7 @@
 				96F3D79916B85961007BE98F /* movie-1.png */,
 				96F3D7B416B878AB007BE98F /* rss.png */,
 				96F3D7A916B85D3D007BE98F /* ers_twitter_icon.tiff */,
+				96C4741116B97FF300826D7A /* twitter_icon.jpg */,
 				96F3D7B216B86D3A007BE98F /* bar-chart.png */,
 				96F3D79A16B85961007BE98F /* headphones.png */,
 				96F3D79B16B85961007BE98F /* ers_icon.png */,
@@ -329,6 +332,7 @@
 				96F3D7AA16B85D3D007BE98F /* ers_twitter_icon.tiff in Resources */,
 				96F3D7B316B86D3B007BE98F /* bar-chart.png in Resources */,
 				96F3D7B516B878AB007BE98F /* rss.png in Resources */,
+				96C4741216B97FF300826D7A /* twitter_icon.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +552,7 @@
 				96F3D77816B82C8B007BE98F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		96F3D77916B82C8B007BE98F /* Build configuration list for PBXNativeTarget "AboutERSTests" */ = {
 			isa = XCConfigurationList;
@@ -556,6 +561,7 @@
 				96F3D77B16B82C8B007BE98F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

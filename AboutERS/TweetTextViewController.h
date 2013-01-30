@@ -10,12 +10,9 @@
 
 @interface TweetTextViewController : UIViewController <UIWebViewDelegate>
 {
-    // IBOutlet UIImageView *profileImage;
-    //IBOutlet UILabel *nameLabel;
     IBOutlet UIWebView * tweetWebView;
-    //IBOutlet UITextView * tweetTextView;
 }
-//@property (strong, nonatomic) IBOutlet UIWebView *tweetWebView;
+
 @property (strong, nonatomic) IBOutlet UIWebView *tweetWebView;
 @property (strong, nonatomic) id detailItem;
 
