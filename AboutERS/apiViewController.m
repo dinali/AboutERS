@@ -47,7 +47,8 @@
     //NSURL *url = [NSURL URLWithString:
     //                     @"http://api.kivaws.org/v1/loans/search.json?status=fundraising"]; //2
     
-    NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/all"];
+   // NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/all"];
+    NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/mostrecent/3/"];
     
     dispatch_async(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		96C4741216B97FF300826D7A /* twitter_icon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 96C4741116B97FF300826D7A /* twitter_icon.jpg */; };
+		96C4741E16B997ED00826D7A /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4741D16B997ED00826D7A /* SearchViewController.m */; };
+		96C4742016B99E4700826D7A /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 96C4741F16B99E4700826D7A /* home.png */; };
+		96C4742316B9A76900826D7A /* MoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96C4742216B9A76900826D7A /* MoreViewController.m */; };
 		96F3D74216B82C8A007BE98F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74116B82C8A007BE98F /* UIKit.framework */; };
 		96F3D74416B82C8A007BE98F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74316B82C8A007BE98F /* Foundation.framework */; };
 		96F3D74616B82C8A007BE98F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F3D74516B82C8A007BE98F /* CoreGraphics.framework */; };
@@ -57,6 +60,11 @@
 
 /* Begin PBXFileReference section */
 		96C4741116B97FF300826D7A /* twitter_icon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = twitter_icon.jpg; sourceTree = "<group>"; };
+		96C4741C16B997ED00826D7A /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		96C4741D16B997ED00826D7A /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		96C4741F16B99E4700826D7A /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
+		96C4742116B9A76900826D7A /* MoreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoreViewController.h; sourceTree = "<group>"; };
+		96C4742216B9A76900826D7A /* MoreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoreViewController.m; sourceTree = "<group>"; };
 		96F3D73D16B82C8A007BE98F /* AboutERS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AboutERS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96F3D74116B82C8A007BE98F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		96F3D74316B82C8A007BE98F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -166,6 +174,10 @@
 		96F3D74716B82C8A007BE98F /* AboutERS */ = {
 			isa = PBXGroup;
 			children = (
+				96C4742116B9A76900826D7A /* MoreViewController.h */,
+				96C4742216B9A76900826D7A /* MoreViewController.m */,
+				96C4741C16B997ED00826D7A /* SearchViewController.h */,
+				96C4741D16B997ED00826D7A /* SearchViewController.m */,
 				96F3D79016B85306007BE98F /* TwitterViewController.h */,
 				96F3D79116B85306007BE98F /* TwitterViewController.m */,
 				96F3D75016B82C8A007BE98F /* ERSAppDelegate.h */,
@@ -198,6 +210,7 @@
 				96F3D79C16B85962007BE98F /* glasses.png */,
 				96F3D79D16B85962007BE98F /* Icon_test.png */,
 				96F3D79E16B85962007BE98F /* rss_icon.png */,
+				96C4741F16B99E4700826D7A /* home.png */,
 				96F3D79F16B85962007BE98F /* search.png */,
 				96F3D74916B82C8A007BE98F /* AboutERS-Info.plist */,
 				96F3D74A16B82C8A007BE98F /* InfoPlist.strings */,
@@ -333,6 +346,7 @@
 				96F3D7B316B86D3B007BE98F /* bar-chart.png in Resources */,
 				96F3D7B516B878AB007BE98F /* rss.png in Resources */,
 				96C4741216B97FF300826D7A /* twitter_icon.jpg in Resources */,
+				96C4742016B99E4700826D7A /* home.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +392,8 @@
 				96F3D79516B8551A007BE98F /* Tweet.m in Sources */,
 				96F3D79816B855A9007BE98F /* TweetTextViewController.m in Sources */,
 				96F3D7B116B86BCA007BE98F /* apiViewController.m in Sources */,
+				96C4741E16B997ED00826D7A /* SearchViewController.m in Sources */,
+				96C4742316B9A76900826D7A /* MoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

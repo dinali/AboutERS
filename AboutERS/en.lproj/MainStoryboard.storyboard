@@ -163,17 +163,19 @@
                         <segue destination="9aY-Xk-8PQ" kind="relationship" relationship="viewControllers" id="ncp-xe-pRb"/>
                         <segue destination="SGE-QN-WaK" kind="relationship" relationship="viewControllers" id="DdD-Hx-9wq"/>
                         <segue destination="74f-Yy-NnJ" kind="relationship" relationship="viewControllers" id="6YB-yg-9b2"/>
+                        <segue destination="80x-4V-Amt" kind="relationship" relationship="viewControllers" id="wL5-oI-WyP"/>
+                        <segue destination="pdE-os-Kvs" kind="relationship" relationship="viewControllers" id="98C-3U-evC"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y8s-Me-4KL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-392" y="196"/>
+            <point key="canvasLocation" x="-376" y="471"/>
         </scene>
-        <!--Navigation Controller - Publications-->
+        <!--Navigation Controller - Home-->
         <scene sceneID="E5i-cl-rrl">
             <objects>
                 <navigationController id="9aY-Xk-8PQ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Publications" image="rss.png" id="qaa-mp-ysa"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="qaa-mp-ysa"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qdX-dw-90O">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -186,7 +188,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aEA-eG-Ik9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="255" y="-245"/>
+            <point key="canvasLocation" x="255" y="-214"/>
         </scene>
         <!--Navigation Controller - Charts of Note-->
         <scene sceneID="y1a-S4-IOE">
@@ -202,7 +204,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lkj-vv-mj9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-304" y="1206"/>
+            <point key="canvasLocation" x="248" y="1194"/>
         </scene>
         <!--Navigation Controller - Twitter-->
         <scene sceneID="k6b-qV-MB7">
@@ -291,15 +293,172 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oxG-rv-lN5" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="1212"/>
+            <point key="canvasLocation" x="662" y="1204"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vZx-Bu-sIe">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="80x-4V-Amt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="foz-xO-5Px"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="DCI-YO-QwB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VnI-gR-xOD" kind="relationship" relationship="rootViewController" id="Mdy-WH-iZb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NOA-kh-opt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="1874"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="m1B-W8-r1x">
+            <objects>
+                <viewController id="VnI-gR-xOD" customClass="SearchViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rGv-Ey-Tbq">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="g1v-dB-Ect">
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qGe-cc-jnW">
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="g1v-dB-Ect" firstAttribute="leading" secondItem="rGv-Ey-Tbq" secondAttribute="leading" type="default" id="1Ch-LB-1JV"/>
+                            <constraint firstItem="qGe-cc-jnW" firstAttribute="top" secondItem="g1v-dB-Ect" secondAttribute="bottom" type="default" id="GXr-PV-rGZ"/>
+                            <constraint firstItem="g1v-dB-Ect" firstAttribute="top" secondItem="rGv-Ey-Tbq" secondAttribute="top" type="default" id="HXW-7d-HMl"/>
+                            <constraint firstItem="qGe-cc-jnW" firstAttribute="leading" secondItem="rGv-Ey-Tbq" secondAttribute="leading" type="default" id="Lju-iD-ogI"/>
+                            <constraint firstItem="g1v-dB-Ect" firstAttribute="trailing" secondItem="rGv-Ey-Tbq" secondAttribute="trailing" type="default" id="YgE-jv-aXA"/>
+                            <constraint firstItem="qGe-cc-jnW" firstAttribute="trailing" secondItem="rGv-Ey-Tbq" secondAttribute="trailing" type="default" id="eKy-R6-HGd"/>
+                            <constraint firstItem="qGe-cc-jnW" firstAttribute="bottom" secondItem="rGv-Ey-Tbq" secondAttribute="bottom" type="default" id="yO3-gd-YgZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="jn4-11-J08"/>
+                    <connections>
+                        <outlet property="searchBarOne" destination="g1v-dB-Ect" id="Udp-gB-U6h"/>
+                        <outlet property="webView" destination="qGe-cc-jnW" id="PRS-qN-1Ol"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ct6-I8-tbA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="654" y="1868"/>
+        </scene>
+        <!--Navigation Controller - More-->
+        <scene sceneID="El5-Cr-uoV">
+            <objects>
+                <navigationController title="More" definesPresentationContext="YES" id="pdE-os-Kvs" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="yhL-zf-B5Y"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="CEM-Yw-qnM">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QzU-Xo-w9u" kind="relationship" relationship="rootViewController" id="Vye-QW-hMC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="liq-ox-rDB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="2573"/>
+        </scene>
+        <!--More View Controller - More-->
+        <scene sceneID="ZpS-ac-otw">
+            <objects>
+                <viewController title="More" id="QzU-Xo-w9u" customClass="MoreViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iwr-jD-9zn">
+                        <rect key="frame" x="0.0" y="64" width="320" height="455"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bk6-po-q0F">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Subject Specialists" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-sE-2QU">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="Dxq-42-mpK"/>
+                                            <constraint firstAttribute="width" constant="305" id="nVT-oo-xS4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Quiz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gvD-g0-WxS">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="B4m-cM-3oq"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Feedback" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cf-WF-IUh">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="9nH-Qz-1Gt"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="About ERS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uK4-G4-1VB">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="31" id="bbC-bq-lCo"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="ygk-sE-2QU" firstAttribute="top" secondItem="bk6-po-q0F" secondAttribute="top" constant="6" id="25b-pC-uy5"/>
+                                    <constraint firstItem="8Cf-WF-IUh" firstAttribute="trailing" secondItem="gvD-g0-WxS" secondAttribute="trailing" type="default" id="98j-ov-iW6"/>
+                                    <constraint firstItem="ygk-sE-2QU" firstAttribute="centerX" secondItem="bk6-po-q0F" secondAttribute="centerX" type="default" id="9qn-dV-b6x"/>
+                                    <constraint firstItem="uK4-G4-1VB" firstAttribute="top" secondItem="8Cf-WF-IUh" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="D7z-in-0Rq"/>
+                                    <constraint firstItem="gvD-g0-WxS" firstAttribute="top" secondItem="ygk-sE-2QU" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Jff-gU-oxA"/>
+                                    <constraint firstItem="gvD-g0-WxS" firstAttribute="leading" secondItem="ygk-sE-2QU" secondAttribute="leading" type="default" id="KWr-vE-O97"/>
+                                    <constraint firstItem="uK4-G4-1VB" firstAttribute="leading" secondItem="8Cf-WF-IUh" secondAttribute="leading" type="default" id="P0y-Ia-FIG"/>
+                                    <constraint firstItem="8Cf-WF-IUh" firstAttribute="top" secondItem="gvD-g0-WxS" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="QHL-94-wk8"/>
+                                    <constraint firstItem="gvD-g0-WxS" firstAttribute="trailing" secondItem="ygk-sE-2QU" secondAttribute="trailing" type="default" id="RdI-Wb-LZk"/>
+                                    <constraint firstItem="uK4-G4-1VB" firstAttribute="trailing" secondItem="8Cf-WF-IUh" secondAttribute="trailing" type="default" id="YQK-nP-igy"/>
+                                    <constraint firstItem="8Cf-WF-IUh" firstAttribute="leading" secondItem="gvD-g0-WxS" secondAttribute="leading" type="default" id="cgI-21-dM1"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bk6-po-q0F" firstAttribute="leading" secondItem="iwr-jD-9zn" secondAttribute="leading" type="default" id="OCj-LE-nzt"/>
+                            <constraint firstAttribute="bottom" secondItem="bk6-po-q0F" secondAttribute="bottom" constant="-5" id="POH-Mm-hCy"/>
+                            <constraint firstItem="bk6-po-q0F" firstAttribute="trailing" secondItem="iwr-jD-9zn" secondAttribute="trailing" type="default" id="UFr-y2-Gql"/>
+                            <constraint firstItem="bk6-po-q0F" firstAttribute="top" secondItem="iwr-jD-9zn" secondAttribute="top" constant="5" id="whh-fk-OL4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vFD-4j-0AG"/>
+                    <connections>
+                        <outlet property="fourLabel" destination="uK4-G4-1VB" id="a75-MH-yhB"/>
+                        <outlet property="oneLabel" destination="ygk-sE-2QU" id="Wcw-YQ-PdX"/>
+                        <outlet property="threeLabel" destination="8Cf-WF-IUh" id="eDR-xk-HKz"/>
+                        <outlet property="twoLabel" destination="gvD-g0-WxS" id="xjd-B6-yLX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j0z-Ei-4ax" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="660" y="2572"/>
         </scene>
     </scenes>
     <resources>
         <image name="bar-chart.png" width="29" height="24"/>
-        <image name="rss.png" width="32" height="32"/>
+        <image name="home.png" width="32" height="32"/>
         <image name="twitter_icon.jpg" width="30" height="30"/>
     </resources>
     <classes>
+        <class className="MoreViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/MoreViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="fourLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="oneLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="threeLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="twoLabel" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
@@ -311,6 +470,13 @@
         </class>
         <class className="NewsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NewsViewController.h"/>
+        </class>
+        <class className="SearchViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SearchViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="searchBarOne" candidateClass="UISearchBar"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
         </class>
         <class className="TweetTextViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/TweetTextViewController.h"/>
