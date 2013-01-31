@@ -26,6 +26,11 @@
     return self;
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    self.title = @"USDA ERS - Twitter";
+}
+
 #pragma mark - Managing the detail item
 
 // passing the request object with the URL to display
@@ -58,11 +63,6 @@
 {
     [super viewDidUnload];
     _detailItem = nil;
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
 }
 
 - (void)viewDidAppear:(BOOL)animated

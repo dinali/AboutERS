@@ -22,6 +22,11 @@
     [_searchBarOne resignFirstResponder]; // hide keyboard
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    self.title = @"USDA ERS - Search";
+}
+
 #pragma mark -
 #pragma mark UISearchBarDelegate
 
@@ -57,11 +62,6 @@
 - (void)searchBarCancelButtonClicked:(UISearchBar *)searchBar
 {
 	NSLog(@"cancel button clicked");
-}
-
-- (void) viewWillAppear:(BOOL)animated
-{
-    //    _testLabel.text = @"this is a test";
 }
 
 // display a page in the UIView on load

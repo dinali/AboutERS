@@ -26,6 +26,11 @@
     }
 }
 
+-(void) viewWillAppear:(BOOL)animated
+{
+    self.title = @"USDA ERS - About ERS";
+}
+
 -(void)configureView
 {
     if (self.detailItem) {
@@ -36,16 +41,11 @@
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    [self configureView];
-}
-
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-}
+//- (void)viewWillAppear:(BOOL)animated
+//{
+//    [super viewWillAppear:animated];
+//    [self configureView];
+//}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

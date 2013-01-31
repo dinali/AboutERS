@@ -32,14 +32,15 @@
     // Dispose of any resources that can be recreated.
 }
 
--(void)viewDidAppear{
-    //self.title = @"Retrieve Data From Website API";
+-(void) viewWillAppear:(BOOL)animated
+{
+    self.title = @"USDA ERS - Charts of Note";
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Charts of Note";
+    //self.title = @"Charts of Note";
     
     dispatch_queue_t kBgQueue = dispatch_get_global_queue(
                                                           DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);

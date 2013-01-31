@@ -19,7 +19,7 @@ Parser *xmlParser;
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    self.title = @"New Publications";
+    self.title = @"USDA ERS - About ERS";
 }
 - (void)viewDidLoad
 {

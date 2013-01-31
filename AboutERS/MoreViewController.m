@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Resources";
+    self.title = @"USDA ERS - Resources";
     
 	// Do any additional setup after loading the view.
 }

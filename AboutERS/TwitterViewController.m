@@ -33,6 +33,7 @@
     return self;
 }
 
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -44,7 +45,7 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-      //self.title = @"test";
+      self.title = @"USDA ERS - Twitter";
 }
 
 - (void)viewDidUnload
