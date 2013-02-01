@@ -1,7 +1,7 @@
 //
 //  MoreViewController.h
 //  AboutERS
-//
+//  Description: displays additional resources / info about ERS
 //  Created by Dina Li on 1/30/13.
 //  Copyright (c) 2013 ers. All rights reserved.
 //
