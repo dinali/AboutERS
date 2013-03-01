@@ -1,18 +1,18 @@
 //
-//  MoreViewController.m
-//  AboutERS
+//  AboutViewController.m
+//  MoreAboutERS
 //
-//  Created by Dina Li on 1/30/13.
-//  Copyright (c) 2013 ers. All rights reserved.
+//  Created by Dina Li on 2/28/13.
+//  Copyright (c) 2013 USDA ERS. All rights reserved.
 //
 
-#import "MoreViewController.h"
+#import "AboutViewController.h"
 
-@interface MoreViewController ()
+@interface AboutViewController ()
 
 @end
 
-@implementation MoreViewController
+@implementation AboutViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -26,9 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"USDA ERS - Resources";
-    
-	// Do any additional setup after loading the view.
+	self.title = @"USDA-ERS";
 }
 
 - (void)didReceiveMemoryWarning

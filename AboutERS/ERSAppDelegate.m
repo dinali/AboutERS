@@ -1,19 +1,37 @@
 //
 //  ERSAppDelegate.m
 //  AboutERS
-//
+//  Modified March 1, 2013 to include the Publications Specialist Search Feature
 //  Created by Dina Li on 1/29/13.
 //  Copyright (c) 2013 ers. All rights reserved.
 //
 
 #import "ERSAppDelegate.h"
+#import "CandyTableViewController.h"
+#import "DataController.h"
+
+@interface ERSAppDelegate ()
+
+@property (nonatomic, strong) CandyTableViewController *rootViewController;
+@property (nonatomic, strong) DataController *dataController;
+
+@end
 
 @implementation ERSAppDelegate
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    // Override point for customization after application launch.
-    return YES;
+@synthesize window=_window, rootViewController=_rootViewController, dataController = _dataController;
+
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application {
+    
+    // Create the data controller and pass it to the root view controller.
+    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
+    
+    CandyTableViewController *rootViewController = (CandyTableViewController *)[[navigationController viewControllers]objectAtIndex:0];
+    
+    _dataController = [[DataController alloc] init];
+    rootViewController.dataController = _dataController;
+    self.dataController = _dataController;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application

@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ERSAppDelegate : UIResponder <UIApplicationDelegate>
+@class DataController;
+@class CandyTableViewController;
+
+// original was UIResponder
+@interface ERSAppDelegate : NSObject <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
