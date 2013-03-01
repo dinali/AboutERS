@@ -1,7 +1,7 @@
 //
 //  TwitterViewController.h
 //  AboutERS
-//
+//  Description: display ERS twitter feed
 //  Created by Dina Li on 1/29/13.
 //  Copyright (c) 2013 ers. All rights reserved.
 //

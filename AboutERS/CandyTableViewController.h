@@ -1,6 +1,7 @@
 //
 //  CandyTableViewController.h
 //  CandySearch
+//  Description: Subject Specialist
 //  http://www.raywenderlich.com/16873/how-to-add-search-into-a-table-view
 //  Created by Nicolas Martin on 7/5/12.
 //  Copyright (c) 2012 University of Illinois at Urbana-Champaign. All rights reserved.

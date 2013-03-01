@@ -1,7 +1,7 @@
 //
 //  PublicationCell.h
 //  SimpleDrillDown
-//
+//  Publications Search Feature
 //  Created by Dina Li on 2/26/13.
 //
 //

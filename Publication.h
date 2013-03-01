@@ -1,7 +1,7 @@
 //
 //  Publication.h
 //  TVAnimationsGestures
-//
+//  Publications Search Feature
 //  Created by Dina Li on 2/20/13.
 //
 //

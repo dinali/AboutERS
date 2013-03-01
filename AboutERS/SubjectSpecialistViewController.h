@@ -6,10 +6,13 @@
 //  Copyright (c) 2012 University of Illinois at Urbana-Champaign. All rights reserved.
 //
 
+/* Publication Search Feature */
+
 #import <UIKit/UIKit.h>
+
 @class DataController;
 
-@interface CandyTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface SubjectSpecialistViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong,nonatomic) NSArray *candyArray;
 @property (strong,nonatomic) NSMutableArray *filteredCandyArray;

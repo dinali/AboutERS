@@ -43,16 +43,16 @@
  
  Copyright (C) 2012 Apple Inc. All Rights Reserved.
  
+ ERS Publications Search Feature
+
  */
 
-//@class Play;
 @class Publication;
 
 /* received one Publication from root controller */
 
 @interface DetailViewController : UITableViewController 
 
-//@property (nonatomic, strong) Play *play;
 @property (nonatomic, strong) Publication *publication;
 
 @end

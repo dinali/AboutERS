@@ -6,23 +6,20 @@
 //  Copyright (c) 2012 University of Illinois at Urbana-Champaign. All rights reserved.
 //
 
-#import "CandyTableViewController.h"
-//#import "Candy.h"
+#import "SubjectSpecialistViewController.h"
 #import "DataController.h"
 #import "DetailViewController.h"
-//#import "Play.h"
 #import "Publication.h"
 
-
-@interface CandyTableViewController ()
+@interface SubjectSpecialistViewController ()
 
 @end
 
-@implementation CandyTableViewController
+@implementation SubjectSpecialistViewController
+
 @synthesize candyArray;
 @synthesize filteredCandyArray;
 @synthesize candySearchBar;
-
 @synthesize dataController;
 
 #pragma mark -
@@ -42,56 +39,22 @@
     CGRect newBounds = [[self tableView] bounds];
     newBounds.origin.y = newBounds.origin.y + candySearchBar.bounds.size.height;
     [[self tableView] setBounds:newBounds];
-
-    /*** Sample Data for candyArray EPIC FAILURE TO MODIFY METHOD ***/
-    // REPLACED with DataController for Publications
-    // create objects separately
-    /*
-    Candy *testCandy = [[Candy alloc] init];
-    testCandy.category = @"(Farm Economy)";
-    testCandy.name = @"Paul Westcott ";
-    testCandy.phone = @"202-694-5335  ";
-    testCandy.email = @"westcott@ers.usda.gov";
-    
-    Candy *testCandy2 = [[Candy alloc] init];
-    testCandy2.category = @"(Crops)";
-    testCandy2.name = @"Edward Allen ";
-    testCandy2.phone = @"202-694-8888  ";
-    testCandy2.email = @"allen@ers.usda.gov";
-    
-    Candy *testCandy3 = [[Candy alloc] init];
-    testCandy3.category = @"(Animal Products)";
-    testCandy3.name = @"Kenneth Matthews ";
-    testCandy3.phone = @"202-694-9999  ";
-    testCandy3.email = @"matthews@ers.usda.gov";
-    
-    candyArray = [NSArray arrayWithObjects: testCandy,
-                  testCandy2,
-                  testCandy3, nil];
-  */  
- //   NSLog(@"test candy category = %@", testCandy.category);
- //   NSLog(@"test candy name = %@", testCandy.name);
- //   NSLog(@"test candy phone = %@", testCandy.phone);
-    
     
     // fill the candyArray with the publications from the DataController
-    candyArray = [NSArray arrayWithArray:dataController.list];
     
+    dataController = [[DataController alloc]init];
+    
+    candyArray = [NSArray arrayWithArray:dataController.list];
     
     filteredCandyArray = [NSMutableArray arrayWithCapacity:[dataController countOfList]];
     
-   // filteredCandyArray = [NSMutableArray arrayWithCapacity:[candyArray count]];
-
     // Reload the table
     [[self tableView] reloadData];
-    
 }
 
 - (void)viewDidUnload
 {
     [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -105,7 +68,6 @@
     // Only one section.
     return 1;
 }
-
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -124,8 +86,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
-    
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if ( cell == nil ) {
@@ -133,7 +93,6 @@
     }
     
     // Create a new Candy Object
-   // Candy *candy = nil;
     Publication *publication = nil;
     
     // Check to see whether the normal table or search results table is being displayed and set the Candy object from the appropriate array
@@ -146,27 +105,10 @@
         publication = [candyArray objectAtIndex:[indexPath row]];
     }
     
-    // Configure the cell
+   [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
-    // add the phone + email and display together
-    // NSString *newString = [aString stringByAppendingString:anotherString];
-    
-    /*
-    NSString *details = [[candy phone] stringByAppendingString: [candy email]];
-    NSString *nameAndCategory = [[candy name] stringByAppendingString: [candy category]];
-    
-    [[cell textLabel] setText:nameAndCategory];
-    [[cell detailTextLabel] setText:details];
-     */
-    
- //   [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
-    
-    
-     // Get the object to display and set the value in the cell.
-     Publication *publicationAtIndex = [dataController objectInListAtIndex:indexPath.row];
-     cell.textLabel.text = publicationAtIndex.titleName;
-    
-    
+    cell.textLabel.text = publication.titleName;
+
     return cell;
 }
 
@@ -193,28 +135,6 @@
         DetailViewController *detailViewController = [segue destinationViewController];
         detailViewController.publication = [dataController objectInListAtIndex:selectedRowIndex.row];
     }
-    
-    // ORIGINAL CandySearch
-    
-   /* if ( [[segue identifier] isEqualToString:@"publicationDetail"] ) {
-        UIViewController *candyDetailViewController = [segue destinationViewController];
-        
-        // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed
-        if(sender == self.searchDisplayController.searchResultsTableView) {
-            NSIndexPath *indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[filteredCandyArray objectAtIndex:[indexPath row]] name];
-            [candyDetailViewController setTitle:destinationTitle];
-        }
-        else {
-            NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-            NSString *destinationTitle = [[candyArray objectAtIndex:[indexPath row]] name];
-            [candyDetailViewController setTitle:destinationTitle];
-        }
-        
-    }
-    */
-    
-    
 }
 
 #pragma mark Content Filtering
@@ -226,7 +146,7 @@
     // Remove all objects from the filtered search array
 	[self.filteredCandyArray removeAllObjects];
     
-	// Filter the array using NSPredicate
+	// Filter the array using NSPredicate - FIX THIS
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.titleName contains[c] %@",searchText];
     NSArray *tempArray = [candyArray filteredArrayUsingPredicate:predicate];
     

@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class DataController;
 
-@interface CandyTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
+@interface PublicationTableViewController : UITableViewController <UISearchBarDelegate, UISearchDisplayDelegate>
 
 @property (strong,nonatomic) NSArray *candyArray;
 @property (strong,nonatomic) NSMutableArray *filteredCandyArray;

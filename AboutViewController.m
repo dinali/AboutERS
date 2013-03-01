@@ -26,7 +26,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	self.title = @"USDA-ERS";
+	self.title = @"USDA-ERS FAQs";
 }
 
 - (void)didReceiveMemoryWarning

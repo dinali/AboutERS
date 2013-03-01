@@ -43,6 +43,8 @@
  
  Copyright (C) 2012 Apple Inc. All Rights Reserved.
  
+ ERS Publications Search Feature
+ 
  */
 
 @class DataController;

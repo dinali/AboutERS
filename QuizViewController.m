@@ -30,6 +30,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"USDA-ERS";
      _responseLabel.hidden = YES;
     checked = NO;
     _mainQuestionLabel.text = @"Which States have the largest number of food processing plants?";

@@ -46,7 +46,7 @@
  
  */
 
-//@class Play;
+/* Publication Search Feature */
 
 @class Publication;
 
@@ -56,7 +56,6 @@
 
 @property (nonatomic, copy, readwrite) NSMutableArray *list; // move here so public?
 
-//- (Play *)objectInListAtIndex:(unsigned)theIndex;
 - (Publication *)objectInListAtIndex:(unsigned)theIndex;
 
 

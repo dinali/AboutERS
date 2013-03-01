@@ -14,13 +14,6 @@
 
 @implementation apiViewController
 
-/*@synthesize titleLabel = _titleLabel;         // title
-@synthesize contentLabel = _dateLabel;   // description
-@synthesize contentTextView = ;
-//@synthesize releaseDateLabel = _releaseDateLabel;
-@synthesize chartImageView = _imageView;  // display the chart in the imageview
-*/
-
 @synthesize titleLabel = _titleLabel;
 @synthesize dateLabel = _dateLabel;
 @synthesize imageView = _imageView;
@@ -49,7 +42,8 @@
     //                     @"http://api.kivaws.org/v1/loans/search.json?status=fundraising"]; //2
     
    // NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/all"];
-    NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/mostrecent/3/"];
+    
+    NSURL *url = [NSURL URLWithString:@"http://api.ers.usda.gov/REST/v1/charts/mostrecent/1/"];
     
     dispatch_async(kBgQueue, ^{
         NSData* data = [NSData dataWithContentsOfURL:
@@ -121,7 +115,7 @@
                             // loop thru the Array and find the dictionary with the description keyField
                             NSUInteger g = 0;
                             
-                            for(g =0; g<propertiesArray.count; g++)
+                            for(g = 0; g < propertiesArray.count; g++)
                             {
                                 NSDictionary *descriptionDictionary = [propertiesArray objectAtIndex:g]; // can't hard code because the structure changes!!
                                 /*

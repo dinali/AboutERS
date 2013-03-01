@@ -62,9 +62,45 @@
     testCandy3.phone = @"202-694-9999  ";
     testCandy3.email = @"matthews@ers.usda.gov";
     
+    Candy *testCandy8 = [[Candy alloc] init];
+    testCandy8.category = @"(Food and Nuitrition Assistance)";
+    testCandy8.name = @"Joanne Guthrie ";
+    testCandy8.phone = @"202-694-9999  ";
+    testCandy8.email = @"guthrie@ers.usda.gov";
+    
+    Candy *testCandy4 = [[Candy alloc] init];
+    testCandy4.category = @"(Food and Nuitrition Assistance)";
+    testCandy4.name = @"Victor Oliveira ";
+    testCandy4.phone = @"202-694-9999  ";
+    testCandy4.email = @"oliveira@ers.usda.gov";
+    
+    Candy *testCandy5 = [[Candy alloc] init];
+    testCandy5.category = @"(Food Choices & Health)";
+    testCandy5.name = @"Bin-Hwan Lin ";
+    testCandy5.phone = @"202-694-9999  ";
+    testCandy5.email = @"lin@ers.usda.gov";
+    
+    Candy *testCandy6 = [[Candy alloc] init];
+    testCandy6.category = @"(Food Products & Prices)";
+    testCandy6.name = @"Ricky Volpe ";
+    testCandy6.phone = @"202-694-9999  ";
+    testCandy6.email = @"volpe@ers.usda.gov";
+    
+    Candy *testCandy7 = [[Candy alloc] init];
+    testCandy7.category = @"(International Markets And Trade)";
+    testCandy7.name = @"Fred Gale ";
+    testCandy7.phone = @"202-694-9999  ";
+    testCandy7.email = @"gale@ers.usda.gov";
+    
     candyArray = [NSArray arrayWithObjects: testCandy,
                   testCandy2,
-                  testCandy3, nil];
+                  testCandy3,
+                  testCandy4,
+                  testCandy5,
+                  testCandy6,
+                  testCandy8,
+                  testCandy7,
+                  nil];
     
     // Initialize the filteredCandyArray with a capacity equal to the candyArray's capacity
     
@@ -142,14 +178,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // Perform segue to candy detail
-    [self performSegueWithIdentifier:@"candyDetail" sender:tableView];
+    [self performSegueWithIdentifier:@"specialistDetail" sender:tableView];
 }
 
 #pragma mark - Segue
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ( [[segue identifier] isEqualToString:@"candyDetail"] ) {
+    if ( [[segue identifier] isEqualToString:@"specialistDetail"] ) {
         UIViewController *candyDetailViewController = [segue destinationViewController];
         
         // In order to manipulate the destination view controller, another check on which table (search or normal) is displayed is needed

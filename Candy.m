@@ -16,14 +16,14 @@
 @synthesize email;
 
 // not used
-+ (id)candyOfCategory:(NSString *)category name:(NSString *)name phone:(NSString *)phone email:(NSString *)email {
-    Candy *newCandy = [[self alloc] init];
-    [newCandy setCategory:category];
-    [newCandy setName:name];
-    [newCandy setName:phone];
-    [newCandy setEmail:email];
-    return newCandy;
-}
+//+ (id)candyOfCategory:(NSString *)category name:(NSString *)name phone:(NSString *)phone email:(NSString *)email {
+//    Candy *newCandy = [[self alloc] init];
+//    [newCandy setCategory:category];
+//    [newCandy setName:name];
+//    [newCandy setName:phone];
+//    [newCandy setEmail:email];
+//    return newCandy;
+//}
 
 @end
 

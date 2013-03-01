@@ -46,7 +46,6 @@
  */
 
 #import "DetailViewController.h"
-//#import "Play.h"
 #import "Publication.h"
 // TODO: implement this #import "PublicationCellView.h"
 
@@ -150,7 +149,6 @@
         default:
             break;
     }
-    
     
     cell.textLabel.text = cellText;
     cell.detailTextLabel.text = detailText;

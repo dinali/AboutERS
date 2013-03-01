@@ -7,31 +7,11 @@
 //
 
 #import "ERSAppDelegate.h"
-#import "CandyTableViewController.h"
-#import "DataController.h"
-
-@interface ERSAppDelegate ()
-
-@property (nonatomic, strong) CandyTableViewController *rootViewController;
-@property (nonatomic, strong) DataController *dataController;
-
-@end
 
 @implementation ERSAppDelegate
 
-@synthesize window=_window, rootViewController=_rootViewController, dataController = _dataController;
-
-
 - (void)applicationDidFinishLaunching:(UIApplication *)application {
     
-    // Create the data controller and pass it to the root view controller.
-    UINavigationController *navigationController = (UINavigationController *)self.window.rootViewController;
-    
-    CandyTableViewController *rootViewController = (CandyTableViewController *)[[navigationController viewControllers]objectAtIndex:0];
-    
-    _dataController = [[DataController alloc] init];
-    rootViewController.dataController = _dataController;
-    self.dataController = _dataController;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
