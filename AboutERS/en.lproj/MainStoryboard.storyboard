@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FPw-tk-lbh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12C3012" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="FPw-tk-lbh">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -256,7 +256,7 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="309" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-L0-9SW">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="loading...please wait" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="309" translatesAutoresizingMaskIntoConstraints="NO" id="PCm-L0-9SW">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="309" id="3JG-l4-ysc"/>
@@ -277,13 +277,14 @@
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3UE-hB-RHX">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="246" id="Tfy-HF-XWc"/>
+                                    <constraint firstAttribute="height" constant="281" type="user" id="Ujv-WJ-RNQ"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" text="note description" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-cA-UHI">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" editable="NO" text="loading...please wait" translatesAutoresizingMaskIntoConstraints="NO" id="E4t-cA-UHI">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="hTI-XX-3b2"/>
+                                    <constraint firstAttribute="height" constant="81" type="user" id="2Jn-cQ-xWg"/>
+                                    <constraint firstAttribute="width" constant="319" id="fm0-1v-KNX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -292,16 +293,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PCm-L0-9SW" firstAttribute="leading" secondItem="pbD-Gn-VO2" secondAttribute="leading" constant="10" id="AXj-Gq-JBm"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="bottom" secondItem="pbD-Gn-VO2" secondAttribute="bottom" type="user" id="EqX-5d-Fl7"/>
                             <constraint firstItem="3UE-hB-RHX" firstAttribute="trailing" secondItem="pbD-Gn-VO2" secondAttribute="trailing" type="default" id="GVN-S6-bbb"/>
                             <constraint firstItem="PCm-L0-9SW" firstAttribute="leading" secondItem="SMN-dd-3vp" secondAttribute="leading" type="default" id="H8a-o9-9eV"/>
-                            <constraint firstItem="3UE-hB-RHX" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" constant="88" id="I2P-wE-FMj"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="leading" secondItem="pbD-Gn-VO2" secondAttribute="leading" type="default" id="MsI-X8-tKi"/>
+                            <constraint firstAttribute="bottom" secondItem="3UE-hB-RHX" secondAttribute="bottom" constant="89" type="user" id="Re4-gD-D4h"/>
+                            <constraint firstItem="3UE-hB-RHX" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" constant="85" type="user" id="SkH-zk-LUs"/>
                             <constraint firstItem="PCm-L0-9SW" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" type="default" id="Xbh-ZI-xGn"/>
-                            <constraint firstItem="SMN-dd-3vp" firstAttribute="trailing" secondItem="E4t-cA-UHI" secondAttribute="trailing" type="default" id="aIW-lt-1KW"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="trailing" secondItem="SMN-dd-3vp" secondAttribute="trailing" type="default" id="Zth-F7-pck"/>
                             <constraint firstItem="SMN-dd-3vp" firstAttribute="trailing" secondItem="PCm-L0-9SW" secondAttribute="trailing" type="default" id="cYY-q0-Ts9"/>
-                            <constraint firstItem="E4t-cA-UHI" firstAttribute="bottom" secondItem="pbD-Gn-VO2" secondAttribute="bottom" type="default" id="kwQ-at-kqU"/>
+                            <constraint firstItem="E4t-cA-UHI" firstAttribute="top" secondItem="3UE-hB-RHX" secondAttribute="bottom" constant="8" symbolic="YES" type="user" id="nsO-JV-dI5"/>
                             <constraint firstItem="SMN-dd-3vp" firstAttribute="top" secondItem="pbD-Gn-VO2" secondAttribute="top" constant="61" id="qdL-eo-seg"/>
-                            <constraint firstItem="SMN-dd-3vp" firstAttribute="leading" secondItem="E4t-cA-UHI" secondAttribute="leading" type="default" id="tPU-hm-q67"/>
                             <constraint firstItem="3UE-hB-RHX" firstAttribute="leading" secondItem="pbD-Gn-VO2" secondAttribute="leading" type="default" id="wZT-3v-5Bc"/>
                         </constraints>
                     </view>
@@ -1040,6 +1042,7 @@ We welcome your feedback on this application. Please contact: mobile.web.admin@e
         <class className="CandyTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CandyTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="goToSearch:"/>
                 <relationship kind="outlet" name="candySearchBar" candidateClass="UISearchBar"/>
             </relationships>
         </class>
@@ -1061,6 +1064,7 @@ We welcome your feedback on this application. Please contact: mobile.web.admin@e
         <class className="PublicationTableViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PublicationTableViewController.h"/>
             <relationships>
+                <relationship kind="action" name="goToSearch:"/>
                 <relationship kind="outlet" name="candySearchBar" candidateClass="UISearchBar"/>
             </relationships>
         </class>
